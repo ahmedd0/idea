@@ -1,0 +1,92 @@
+*{
+    outline: none;
+}
+.navbar{
+    transition: all 0.5s ease-in-out;
+    a.navbar-brand{
+        font-weight:bold !important;
+        &:hover{
+            color: white;
+        }
+    }
+    .collapse{
+        ul{
+            li{
+                a{
+                    &.dropdown-toggle{
+                        &::after{
+                            content: " ";
+                            display: none;
+                            border-color: transparent;
+                        }
+                    }
+    
+
+                }
+                &:hover .dropdown-menu{
+                    display: block;
+                    
+
+                }
+                .dropdown-menu{
+                    width:300px;
+                    a{
+                        &:hover{
+                            background:$main-color;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.header{
+    overflow: hidden;
+    position: relative;
+    .carousel{
+        position: relative;
+        ol{
+            li{
+                height: 10px;
+                width:10px;
+            }
+        }
+        .carousel-inner{
+            height: 100%;
+            .carousel-item{
+                height: 100%;
+                #video{
+                    height: 100% !important;
+                    object-fit: cover !important;
+                
+                }
+            }
+            .carousel-item{
+
+                h1{
+                    position: absolute;
+                    left:50%;
+                    top: 50%;    
+                    color: white;
+                    transform: translate(-50%, -50%);
+                    z-index: 55;
+                    
+    
+                }
+    
+            }
+        }
+        .carousel-control-prev, .carousel-control-prev{
+            z-index: 55;
+        }
+    }
+    .overlay{
+        position:absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background: #000000a3;
+    }
+}
